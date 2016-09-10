@@ -15,7 +15,7 @@ describe('Running slint', function () {
   });
 
   // nodejs error thrown overwrites status code
-  xit('should return a non-zero exit code if invalid', function (done) {
+  it('should return a non-zero exit code if invalid', function (done) {
     var slint = spawn('node', ['./bin/slint', 'INVALID\ FILE']);
 
     slint.on('close', function (code) {
